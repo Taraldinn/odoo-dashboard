@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ওদু রিয়েলটাইম বাংলা ড্যাশবোর্ড | Odoo Live Analytics</title>
+    <meta name="description" content="Odoo ERP-এর জন্য রিয়েলটাইম সেলস, পারচেস, লাভ-ক্ষতি ও ইনভেন্টরি ড্যাশবোর্ড সম্পূর্ণ বাংলা ভাষায়।" />
+    <!-- Google Fonts: Hind Siliguri (Bengali) & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Auto-migrate stale localStorage -->
+    <script>
+      (function() {
+        var KEY = 'odoo_bangla_dashboard_settings_v1';
+        try {
+          var raw = localStorage.getItem(KEY);
+          if (raw) {
+            var s = JSON.parse(raw);
+            if (!s.odooConfig) {
+              s.odooConfig = {};
+              localStorage.setItem(KEY, JSON.stringify(s));
+            }
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
